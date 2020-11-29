@@ -1,0 +1,59 @@
+<div class="container">
+  <h2>Spacex Launch Progarm</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="head">
+        <div class="card">
+          <h4 style="margin-left: 17px" class="card-title">Filter</h4>
+          <label style="margin-left: 25%; margin-bottom: 0%;">Launch Year</label>
+          <hr>
+          <div class="card-block">
+            <div class="bttn" id="btn">
+              <ng-container *ngFor="let year of years">
+                <a (click)="filterByYear(year)" [ngClass]="{'active':selectedYear===year}">{{year}}</a>
+              </ng-container>
+            </div>
+          </div>
+          <label style="margin-left: 30%;margin-bottom: 0%;">Successfull Launch </label>
+          <hr>
+          <div class="card-block">
+            <div class="bttn">
+              <a (click)="launchFilter('True')" [ngClass]="isLauncSuccess ?'active':''">True</a>
+              <a (click)="launchFilter('False')" [ngClass]="!isLauncSuccess ?'active':''" >False</a>
+            </div>
+          </div>
+          <label style="margin-left: 30%;margin-bottom: 0%">Successfull Landing </label>
+          <hr>
+          <div class="card-block">
+            <div class="bttn">
+              <a (click)="landFilter('True')" [ngClass]="isLandSuccess ?'active':''">True</a>
+              <a (click)="landFilter('False')" [ngClass]="!isLandSuccess ?'active':''">False</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let item of this.spacedata">
+          <div class="head">
+            <div class="card">
+              <img class="card-img-top" src="{{ item.links.mission_patch_small }}" alt="Spacex image" />
+              <div class="card_content">
+                <p>
+                  Mission Name: {{ item.mission_name }} </p>
+                <p>Mission IDs: {{ item.mission_id }}</p>
+                <p>Launch Year: {{ item.launch_year }}</p>
+                <p>Successful Launch: {{ item.launch_success }}</p>
+                <p>Successful Landing: {{ item.launch_success }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <b>Developed by:</b> {{Developer}}
+  </div>
+</div>

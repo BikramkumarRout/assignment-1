@@ -1,0 +1,119 @@
+   .head{
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1599px;
+}
+}
+.spacer {
+  flex: 1;
+}
+
+ .card {
+   padding-left:auto;
+   padding-right:auto;
+   margin-top:13px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: .25s box-shadow;
+  transition: .25s box-shadow;
+ }
+ .card:focus, .card:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+ }
+ .card-inverse .card-img-overlay {
+  background-color: rgba(51, 51, 51, 0.85);
+  border-color: rgba(51, 51, 51, 0.85);
+ }
+ .card-img-top{
+   margin-top:10px;
+ }
+ .col-xs-12{
+   text-align:center;
+   margin-left:auto;
+   margin-right:auto;
+ }
+a:link:active{
+  background-color: black;
+}
+
+ .bttn {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 320px;
+}
+.bttn a {
+  background:rgba(33, 124, 6, 0.404);
+  margin: 1em;
+  color: black;
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+  .bttn a:hover{
+  background-color: green;
+}  
+.active{
+background-color: grey !important;
+}
+
+.card {
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px 5px grey;
+}
+
+.card_content {
+  padding: 1rem;
+  background-color: #fff;
+  color: black;
+  
+}
+
+.card_title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ justify-content: center;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.footer {
+text-align: center;
+margin: auto;
+}
